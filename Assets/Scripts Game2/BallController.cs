@@ -124,7 +124,7 @@ public class BallController : MonoBehaviour
             CekGameSelesai();
             ResetBall(true);
         }
-        else if (nama == "Monyet Kiri" || nama == "Monyet Kanan")
+        else if (nama == "Monyet Kiri" || nama == "Monyet Kanan"|| nama == "Tepi Atas" || nama == "Tepi Bawah")
         {
             float sudut = (transform.position.y - coll.transform.position.y) * 5f;
             Vector2 arah = new Vector2(rigid.velocity.x, sudut).normalized;

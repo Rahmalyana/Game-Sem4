@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 45}
-  m_SizeDelta: {x: 256, y: 180}
+  m_AnchoredPosition: {x: 0, y: 70}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106795957
 MonoBehaviour:
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f95c11a84801d44d8b9aa57edab3bfb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e776c531dc0987d47961f189a47dcd52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360, y: 220}
-  m_SizeDelta: {x: 256, y: 180}
+  m_AnchoredPosition: {x: -680, y: 320}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010807655
 MonoBehaviour:
@@ -416,7 +416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1010807656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336505449}
+        m_TargetAssemblyTypeName: HalamanManager, Assembly-CSharp
+        m_MethodName: Home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1010807656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4fb4f03dac1f8f8479f55e3bfe0f6753, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdef989923cd7f14bbbc5fed01fb6ed6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -715,7 +727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4868988cbb3364d825d1bd49dbdae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEscapeToExit: 0
+  EnterScene: 
+  EscapeScene: 
+  isEscapeForQuit: 0
 --- !u!1 &1589949953
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,9 +804,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1024, y: 720}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -857,8 +871,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -45}
-  m_SizeDelta: {x: 258, y: 180}
+  m_AnchoredPosition: {x: 0, y: -70}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801321315
 MonoBehaviour:
@@ -936,7 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4946cc1920e35c746b8c7f7978755fd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea6b820dafa8188449220bc700eb608f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

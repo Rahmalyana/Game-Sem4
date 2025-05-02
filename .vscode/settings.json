@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Game-Sem4-copy.sln"
+    "dotnet.defaultSolution": "Game-Sem4.sln"
 }
