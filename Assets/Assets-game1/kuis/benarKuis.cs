@@ -7,10 +7,12 @@ public class benarKuis : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField]
-    private Transform Jawaban;
+    public Transform Jawaban;
+  
     private Vector2 initialPosition;
     private float deltaX, deltaY;
     public static bool locked;
+    public SoalManager soalManager;
     void Start()
     {
         initialPosition = transform.position;
@@ -47,6 +49,7 @@ public class benarKuis : MonoBehaviour
                 {
                     transform.position = new Vector2(Jawaban.position.x, Jawaban.position.y);
                     locked = true;
+
                 }
                 else
                 {
@@ -54,5 +57,17 @@ public class benarKuis : MonoBehaviour
                 }
             }
         }
+        
+        if (Mathf.Abs(transform.position.x - Jawaban.position.x) <= 0.5f &&
+            Mathf.Abs(transform.position.y - Jawaban.position.y) <= 0.5f)
+        {
+            transform.position = new Vector2(Jawaban.position.x, Jawaban.position.y);
+            locked = true;
+
+            // Panggil perubahan soal
+            soalManager.GantiSoal();
+        }
     }
+   
+    
 }

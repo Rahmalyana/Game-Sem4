@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GerakPahlawan : MonoBehaviour
 {
@@ -22,6 +24,11 @@ public class GerakPahlawan : MonoBehaviour
                 StopCurrentAudio();
                 idx++;
                 PlayCurrentAudio();
+
+                if (idx == posX.Length - 1)
+        {
+            StartCoroutine(PindahKeKuis()); // tunggu sebentar sebelum pindah
+        }
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
@@ -55,4 +62,12 @@ public class GerakPahlawan : MonoBehaviour
             source.Stop();
         }
     }
+
+    IEnumerator PindahKeKuis()
+    {
+        yield return new WaitForSeconds(15f); // tunggu 1.5 detik agar audio terakhir sempat main
+        SceneManager.LoadScene("Game1-kuis");
+    }
+
+
 }

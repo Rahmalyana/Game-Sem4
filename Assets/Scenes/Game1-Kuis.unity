@@ -422,6 +422,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jawaban: {fileID: 1865665991}
+  soalManager: {fileID: 924397039}
+--- !u!1 &924397038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924397040}
+  - component: {fileID: 924397039}
+  m_Layer: 0
+  m_Name: SoalManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &924397039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924397038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8483e920c366ed64eb6c78c6e280918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gambarPahlawan: {fileID: 1431865747}
+  jawaban1: {fileID: 229811391}
+  jawaban2: {fileID: 1299380175}
+  jawaban3: {fileID: 772360601}
+  gambarBaruPahlawan: {fileID: 21300000, guid: 2f937f57f186408478366fe8cb111014, type: 3}
+  jawabanBaru1: {fileID: 21300000, guid: a3517f3922341944896615aa92bb6d16, type: 3}
+  jawabanBaru2: {fileID: 21300000, guid: 3a0810fd1ec7ff14c8e1ed26de5d9842, type: 3}
+  jawabanBaru3: {fileID: 21300000, guid: 4d7c6414bf219d9408891b6cf315a1f2, type: 3}
+  jawabanBenarBerikutnya: {fileID: 1299380176}
+  scriptBenarKuis: {fileID: 1299380180}
+--- !u!4 &924397040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924397038}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927384917
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +488,7 @@ GameObject:
   - component: {fileID: 927384919}
   - component: {fileID: 927384918}
   m_Layer: 0
-  m_Name: BG GAME 1-kuuis (1)
+  m_Name: BG GAME 1-kuis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,6 +749,7 @@ GameObject:
   - component: {fileID: 1299380175}
   - component: {fileID: 1299380179}
   - component: {fileID: 1299380178}
+  - component: {fileID: 1299380180}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -825,6 +881,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4356d462c3d26bb4aa8831b756ca7e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1299380180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299380174}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e680a2c8220e8439db3601f03cbbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jawaban: {fileID: 1865665991}
+  soalManager: {fileID: 924397039}
 --- !u!1 &1359783004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,96 +1467,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2015879343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2015879345}
-  - component: {fileID: 2015879344}
-  m_Layer: 0
-  m_Name: BG GAME 1-kuuis
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2015879344
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015879343}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b512ea777162f548b8180f2d78cc094, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 16, y: 9}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2015879345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015879343}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.15, y: 1.15, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1359783007}
-  - {fileID: 2015879345}
+  - {fileID: 927384919}
   - {fileID: 1431865748}
   - {fileID: 1865665991}
   - {fileID: 229811392}
@@ -1495,4 +1481,4 @@ SceneRoots:
   - {fileID: 1698476844}
   - {fileID: 1400208377}
   - {fileID: 1923837237}
-  - {fileID: 927384919}
+  - {fileID: 924397040}
