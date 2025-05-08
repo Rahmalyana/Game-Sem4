@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class GerakPahlawan : MonoBehaviour
 {
     int[] posX = new int[] { 0, -20, -40, -60, -80, -100, -120, -140, -160 };
     int idx = 0;
     public AudioSource[] audio;
+
+    private Coroutine kuisCoroutine;
+    private bool isReadyToLoad = false;
+    private bool sudahPindah = false;
 
     void Start()
     {
@@ -25,12 +28,21 @@ public class GerakPahlawan : MonoBehaviour
                 idx++;
                 PlayCurrentAudio();
 
-                if (idx == posX.Length - 1)
-        {
-            StartCoroutine(PindahKeKuis()); // tunggu sebentar sebelum pindah
-        }
+                if (idx == posX.Length - 1 && !isReadyToLoad)
+                {
+                    isReadyToLoad = true;
+                    kuisCoroutine = StartCoroutine(PindahKeKuis());
+                }
+            }
+            else if (idx == posX.Length - 1 && isReadyToLoad && !sudahPindah)
+            {
+                // Tekan RightArrow lagi di posisi terakhir => langsung pindah
+                if (kuisCoroutine != null) StopCoroutine(kuisCoroutine);
+                sudahPindah = true;
+                SceneManager.LoadScene("Game1-kuis");
             }
         }
+
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             if (idx > 0)
@@ -49,7 +61,7 @@ public class GerakPahlawan : MonoBehaviour
         AudioSource[] sources = audio[idx].gameObject.GetComponents<AudioSource>();
         for (int i = 0; i < sources.Length; i++)
         {
-            sources[i].volume = (i == 0) ? 2.0f : 0.1f; // Atur volume: audio[0] keras, audio[1] pelan
+            sources[i].volume = (i == 0) ? 2.0f : 0.1f;
             sources[i].Play();
         }
     }
@@ -65,9 +77,7 @@ public class GerakPahlawan : MonoBehaviour
 
     IEnumerator PindahKeKuis()
     {
-        yield return new WaitForSeconds(18f); // tunggu 1.5 detik agar audio terakhir sempat main
+        yield return new WaitForSeconds(15f); // tunggu 1.5 detik agar audio terakhir sempat main
         SceneManager.LoadScene("Game1-kuis");
     }
-
-
 }
