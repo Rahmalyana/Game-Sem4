@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MunculSampah : MonoBehaviour
+public class MunculHewan : MonoBehaviour
 {
     public float jeda = 0.8f;
     float timer;
-    public GameObject[] obyekSampah;
+    public GameObject[] obyekHewan;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,8 @@ public class MunculSampah : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > jeda)
         {
-            int random = Random.Range(0, obyekSampah.Length);
-            Instantiate (obyekSampah [random], transform.position, transform.rotation);
+            int random = Random.Range(0, obyekHewan.Length);
+            Instantiate (obyekHewan [random], transform.position, transform.rotation);
             timer = 0;
         }
     }

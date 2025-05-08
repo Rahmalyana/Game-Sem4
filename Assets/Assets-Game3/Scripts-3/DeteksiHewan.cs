@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class DeteksiSampah : MonoBehaviour
+public class DeteksiHewan : MonoBehaviour
 {
     public string nameTag;
     public AudioClip audioBenar;

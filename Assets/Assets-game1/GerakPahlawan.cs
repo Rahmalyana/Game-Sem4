@@ -77,11 +77,7 @@ public class GerakPahlawan : MonoBehaviour
 
     IEnumerator PindahKeKuis()
     {
-        yield return new WaitForSeconds(20f); // Waktu dengar audio terakhir
-        if (!sudahPindah)
-        {
-            sudahPindah = true;
-            SceneManager.LoadScene("Game1-kuis");
-        }
+        yield return new WaitForSeconds(18f);
+        SceneManager.LoadScene("Game1-kuis");
     }
 }
