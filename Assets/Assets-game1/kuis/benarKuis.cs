@@ -65,9 +65,20 @@ public class benarKuis : MonoBehaviour
             locked = true;
 
             // Panggil perubahan soal
-            soalManager.GantiSoal();
+            StartCoroutine(GantiSoalDenganDelay());
+
         }
     }
-   
-    
+   IEnumerator GantiSoalDenganDelay()
+{
+    yield return new WaitForSeconds(1f); // Delay 1 detik
+    soalManager.GantiSoal();
+}
+
+    public void ResetPosisi()
+    {
+        transform.position = initialPosition;
+        locked = false;
+    }
+
 }

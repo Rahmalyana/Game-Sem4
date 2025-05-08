@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game1.unity
     guid: b9245a3e84b16d64cba543079954a873
   - enabled: 1
+    path: Assets/Scenes/Game1-kuis.unity
+    guid: 14cfe452643fca54997f5a287f25f550
+  - enabled: 1
     path: Assets/Scenes/Mode.unity
     guid: ec2b6e57c87f2774f94984df6cf79f2b
   - enabled: 1

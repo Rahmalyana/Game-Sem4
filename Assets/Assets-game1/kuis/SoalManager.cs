@@ -13,19 +13,28 @@ public class SoalManager : MonoBehaviour
     public Sprite jawabanBaru3;
 
     public Transform jawabanBenarBerikutnya;
-public benarKuis scriptBenarKuis;
+    public benarKuis scriptBenarKuis;
+
+    public int nomorSoal = 1;
+    public int totalSoal = 2;
+
 
     public void GantiSoal()
+{
+    if (nomorSoal < totalSoal)
     {
+        nomorSoal++;
+
         gambarPahlawan.sprite = gambarBaruPahlawan;
         jawaban1.sprite = jawabanBaru1;
         jawaban2.sprite = jawabanBaru2;
         jawaban3.sprite = jawabanBaru3;
 
-        // Ganti target jawaban benar
-    scriptBenarKuis.Jawaban = jawabanBenarBerikutnya;
-
-        // reset posisi atau lock jika perlu
+        scriptBenarKuis.Jawaban = jawabanBenarBerikutnya;
+        scriptBenarKuis.ResetPosisi();
         benarKuis.locked = false;
     }
+    // Jika sudah soal terakhir, tidak lakukan apa-apa (atau bisa trigger winText di sini juga)
+}
+
 }

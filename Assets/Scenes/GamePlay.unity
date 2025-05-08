@@ -265,10 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe3d5e881a945748bca3ed7a7d52ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameTag: Organik
-  audioBenar: {fileID: 8300000, guid: 2d1b5b2e6b7f1994b88f001820cc64c3, type: 3}
-  audioSalah: {fileID: 8300000, guid: 4f47f29182e6acb489b813172e9da024, type: 3}
-  textScore: {fileID: 2081702724}
 --- !u!1 &161018059
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,10 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c51e9c999ffe7949bab7206b59ae1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jeda: 0.8
-  obyekSampah:
-  - {fileID: 623804343923361540, guid: 52f09c6918aff3949841159637aad6a9, type: 3}
-  - {fileID: 6467146105992559887, guid: 07e3f275eb7c1e140b0fa8d6bfae5d16, type: 3}
 --- !u!4 &199493218
 Transform:
   m_ObjectHideFlags: 0
@@ -605,7 +597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 736d82c41843311459888171b3af2b29, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ca4b9afeeae4674aa06033493d78cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1477828937
@@ -751,10 +743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe3d5e881a945748bca3ed7a7d52ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameTag: NonOrganik
-  audioBenar: {fileID: 8300000, guid: 2d1b5b2e6b7f1994b88f001820cc64c3, type: 3}
-  audioSalah: {fileID: 8300000, guid: 4f47f29182e6acb489b813172e9da024, type: 3}
-  textScore: {fileID: 2081702724}
 --- !u!1 &1606118658
 GameObject:
   m_ObjectHideFlags: 0
