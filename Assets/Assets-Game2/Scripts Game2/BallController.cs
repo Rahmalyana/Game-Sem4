@@ -23,13 +23,17 @@ public class BallController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip hitSound;
 
+    // Timer Variables
+    private float gameTime = 120f; // 2 minutes in seconds
+    public Text timerText; // Reference to UI Text element to display the timer
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<AudioSource>(); // Inisialisasi AudioSource
+        audioSource = GetComponent<AudioSource>(); // Initialize AudioSource
 
         UpdateScoreUI();
-        panelSelesai.SetActive(false); // Sembunyikan panel di awal
+        panelSelesai.SetActive(false); // Hide panel at the start
         StartGame();
     }
 
@@ -60,6 +64,14 @@ public class BallController : MonoBehaviour
         scoreKananText.text = skorKanan.ToString();
     }
 
+    // Update the timer display
+    void UpdateTimerDisplay()
+    {
+        int minutes = Mathf.FloorToInt(gameTime / 60);
+        int seconds = Mathf.FloorToInt(gameTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
     void CekGameSelesai()
     {
         if (skorKiri >= 5)
@@ -70,20 +82,36 @@ public class BallController : MonoBehaviour
         {
             GameOver("Monyet Kanan Menang!");
         }
+        else if (gameTime <= 0)
+        {
+            // Time's up, check score
+            if (skorKiri > skorKanan)
+            {
+                GameOver("Monyet Kiri Menang!");
+            }
+            else if (skorKiri < skorKanan)
+            {
+                GameOver("Monyet Kanan Menang!");
+            }
+            else
+            {
+                GameOver("Seri!");
+            }
+        }
     }
 
     void GameOver(string pemenang)
     {
         panelSelesai.SetActive(true);
         pemenangText.text = pemenang;
-        gameObject.SetActive(false); // Hilangkan bola
+        gameObject.SetActive(false); // Hide the ball
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
         string nama = coll.gameObject.name;
 
-        // Putar suara jika tersedia
+        // Play sound if available
         if (hitSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(hitSound);
@@ -124,12 +152,27 @@ public class BallController : MonoBehaviour
             CekGameSelesai();
             ResetBall(true);
         }
-        else if (nama == "Monyet Kiri" || nama == "Monyet Kanan"|| nama == "Tepi Atas" || nama == "Tepi Bawah")
+        else if (nama == "Monyet Kiri" || nama == "Monyet Kanan" || nama == "Tepi Atas" || nama == "Tepi Bawah")
         {
             float sudut = (transform.position.y - coll.transform.position.y) * 5f;
             Vector2 arah = new Vector2(rigid.velocity.x, sudut).normalized;
             rigid.velocity = Vector2.zero;
             rigid.AddForce(arah * force);
+        }
+    }
+
+    void Update()
+    {
+        if (gameTime > 0)
+        {
+            gameTime -= Time.deltaTime;
+            UpdateTimerDisplay();
+
+            if (gameTime <= 0)
+            {
+                gameTime = 0; // pastikan tidak negatif
+                CekGameSelesai(); // cek siapa pemenangnya segera setelah waktu habis
+            }
         }
     }
 }
