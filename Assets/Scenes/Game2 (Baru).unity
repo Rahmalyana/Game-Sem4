@@ -310,11 +310,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
-    m_FontSize: 45
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 77
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -389,19 +389,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 77
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Permainan Selesai
+  m_Text: PERMAINAN SELESAI
 --- !u!222 &187301919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
     m_FontSize: 86
     m_FontStyle: 0
     m_BestFit: 0
@@ -828,7 +828,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.42, y: -0.0227, z: 0}
-  m_LocalScale: {x: 0.4362169, y: 3.6361444, z: 1}
+  m_LocalScale: {x: 0.4134339, y: 3.271603, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1233,7 +1233,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
     m_FontSize: 86
     m_FontStyle: 0
     m_BestFit: 0
@@ -1312,7 +1312,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -2243,7 +2243,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -2666,7 +2666,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8ad6fea74c31353438f3774c8642d7f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c4d44f3eb0ebe594ba011e3c214225d4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3027,7 +3027,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cc980a8e85d2056479486b908906d11b, type: 3}
+    m_Font: {fileID: 12800000, guid: 834dbba4969c8fa4299e9f54e72d1241, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -3174,8 +3174,8 @@ Transform:
   m_GameObject: {fileID: 2141974943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.42, y: 0.0227, z: 0}
-  m_LocalScale: {x: 0.4362169, y: 3.636144, z: 1}
+  m_LocalPosition: {x: 8.42, y: 0, z: 0}
+  m_LocalScale: {x: 0.4134339, y: 3.271603, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

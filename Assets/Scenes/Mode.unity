@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnterScene: 
-  EscapeScene: 
+  EscapeScene: Home
   isEscapeForQuit: 0
 --- !u!1 &1589949953
 GameObject:
