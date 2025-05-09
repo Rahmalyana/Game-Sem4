@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2521c007380fbc84ca6b8c831e86eb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jeda: 2
+  jeda: 3
   obyekHewan:
   - {fileID: 5048970673499846287, guid: e5834003fed439344b5c16e1e0fa749e, type: 3}
   - {fileID: 3561311994539867026, guid: 39c7db8013f57aa4f98e24e0bd9673ec, type: 3}
