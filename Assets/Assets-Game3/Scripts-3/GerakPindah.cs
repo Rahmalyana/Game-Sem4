@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GerakPindah : MonoBehaviour
 {
-    float speed = 3f;
+    float speed = 2f;
     public Sprite[] sprites;
     // Start is called before the first frame update
     void Start()

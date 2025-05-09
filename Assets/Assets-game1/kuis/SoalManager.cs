@@ -17,6 +17,10 @@ public class SoalManager : MonoBehaviour
 
     public int nomorSoal = 1;
     public int totalSoal = 2;
+void Start()
+{
+    benarKuis.locked = false;
+}
 
 
     public void GantiSoal()

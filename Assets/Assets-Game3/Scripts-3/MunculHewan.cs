@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MunculHewan : MonoBehaviour
 {
-    public float jeda = 0.8f;
+    public float jeda = 0.9f;
     float timer;
     public GameObject[] obyekHewan;
     // Start is called before the first frame update
