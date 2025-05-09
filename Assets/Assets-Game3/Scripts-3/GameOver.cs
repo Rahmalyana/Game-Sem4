@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
     public Text currentScoreText;
     void Start()
     {
-        Data.nyawa = 3;
+        Data.nyawa = 3;     // Reset nyawa ke 3
         // Tampilkan skor saat ini
         currentScoreText.text = "Skor: " + Data.score;
         Data.score = 0;

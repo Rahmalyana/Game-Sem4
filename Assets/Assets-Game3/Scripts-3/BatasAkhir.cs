@@ -33,7 +33,7 @@ public class BatasAkhir : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
-            Data.nyawa--;
+            Data.nyawa--;   // Mengurangi nyawa 1
 
             Debug.Log("Nyawa sekarang: " + Data.nyawa);
 
